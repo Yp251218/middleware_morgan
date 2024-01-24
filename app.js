@@ -6,6 +6,8 @@ const http = require('http');
 const app = express();
 const port = 5000;
 
+console.log("Hi");
+
 const logFile = path.join(__dirname, 'access.log');
 
 app.use(morgan('combined', {stream : fs.createWriteStream(logFile,{flags: 'a'})}));
